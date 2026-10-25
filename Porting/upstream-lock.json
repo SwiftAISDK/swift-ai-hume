@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "packages": [
+    {
+      "name": "@ai-sdk/hume",
+      "reviewedVersion": "3.0.68",
+      "ledgerKind": "provider",
+      "evidence": "`AIProviders.hume`, `HumeSpeechModel`, `HumeProviderTests.swift`",
+      "reviewStatus": "imported-reviewed-with-gaps",
+      "archiveIntegrity": "sha512-8/G6ZnjPuKcAEdFc/n6BE38NQrrJ5UoyCbI0PwrtvMzPNgTJaNY5OFysZ9nV1Rao7Arf91xxhJ/GABYxmTneDg==",
+      "sourceRef": "npm:@ai-sdk/hume@3.0.68",
+      "testRef": "682e2dd71456f14f9da33a1b983d1998c3a1184c",
+      "testRefRelationship": "inventory-snapshot-not-release-verified",
+      "contractFamilies": [],
+      "contractReview": "not-imported; inspect upstream declarations before extraction"
+    }
+  ]
+}

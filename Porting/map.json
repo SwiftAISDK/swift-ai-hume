@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "package": "swift-ai-hume",
+  "status": "coarse-import",
+  "upstream": [
+    {
+      "name": "@ai-sdk/hume",
+      "implementation": [
+        "packages/hume/src"
+      ],
+      "tests": [
+        "packages/hume/src/hume-error.test.ts",
+        "packages/hume/src/hume-speech-model.test.ts",
+        "packages/hume/src/lazy-schemas.test.ts"
+      ]
+    }
+  ],
+  "swift": {
+    "sources": [
+      "Sources/SwiftAIHume/HumeAudioModels.swift",
+      "Sources/SwiftAIHume/HumeProvider.swift"
+    ],
+    "tests": [
+      "Tests/SwiftAIHumeTests/FixtureDownloadTransport.swift",
+      "Tests/SwiftAIHumeTests/HumeProviderTests.swift",
+      "Tests/SwiftAIHumeTests/TestSupport.swift"
+    ],
+    "resources": []
+  },
+  "differences": [
+    {
+      "kind": "native-adaptation",
+      "reason": "Preserve Swift async/await, Sendable, Foundation transport and existing documented gaps; see Docs/CoreV6Parity.md and PortingStatus.md."
+    }
+  ],
+  "reviewNote": "M6: Hume runtime and focused upstream-derived tests own their package; HTTP construction is shared, options and wire policy remain local. Prior baselines and known gaps are retained.",
+  "canonicalOnlyReferences": [],
+  "canonicalDirectory": "Packages/swift-ai-hume"
+}
