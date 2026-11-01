@@ -3,16 +3,19 @@
   "packages": [
     {
       "name": "@ai-sdk/hume",
-      "reviewedVersion": "3.0.68",
+      "reviewedVersion": "3.0.72",
       "ledgerKind": "provider",
-      "evidence": "`AIProviders.hume`, `HumeSpeechModel`, `HumeProviderTests.swift`",
+      "evidence": "`AIProviders.hume`, `HumeSpeechModel`, `HumeProviderTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json",
       "reviewStatus": "imported-reviewed-with-gaps",
-      "archiveIntegrity": "sha512-8/G6ZnjPuKcAEdFc/n6BE38NQrrJ5UoyCbI0PwrtvMzPNgTJaNY5OFysZ9nV1Rao7Arf91xxhJ/GABYxmTneDg==",
-      "sourceRef": "npm:@ai-sdk/hume@3.0.68",
-      "testRef": "682e2dd71456f14f9da33a1b983d1998c3a1184c",
-      "testRefRelationship": "inventory-snapshot-not-release-verified",
-      "contractFamilies": [],
-      "contractReview": "not-imported; inspect upstream declarations before extraction"
+      "archiveIntegrity": "sha512-8pL0yW+lUUiGgfym0owevpwR+Ka61AMnYZ21/95Xl9XTrsrSqnTMwsiOELOvFucVNWh6l+Y/w32GeXdymGmgUw==",
+      "sourceRef": "npm:@ai-sdk/hume@3.0.72",
+      "testRef": "9b603d36186b75e58d5479445a96c76f6e2d2700",
+      "testRefRelationship": "matching-release",
+      "contractFamilies": [
+        "ProviderV4",
+        "SpeechModelV4"
+      ],
+      "contractReview": "2026-11-01: published declarations, source and exact matching-release changed tests reviewed; scoped dispositions and Swift translations are in Docs/WeeklyUpstreamAudit20261101.json. Existing broader product gaps remain; reviewed delta is not full-package parity."
     }
   ]
 }

@@ -23,7 +23,8 @@
     "tests": [
       "Tests/SwiftAIHumeTests/FixtureDownloadTransport.swift",
       "Tests/SwiftAIHumeTests/HumeProviderTests.swift",
-      "Tests/SwiftAIHumeTests/TestSupport.swift"
+      "Tests/SwiftAIHumeTests/TestSupport.swift",
+      "Tests/SwiftAIHumeTests/Weekly20261101CredentialsTests.swift"
     ],
     "resources": []
   },
