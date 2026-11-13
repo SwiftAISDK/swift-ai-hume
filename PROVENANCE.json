@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "package": "swift-ai-hume",
-  "version": "1.1.1",
-  "releaseID": "weekly-upstream-20261108",
+  "version": "1.1.2",
+  "releaseID": "weekly-upstream-20261114",
   "source": {
-    "commit": "8e233ff96fb809445aff9a5c06bb6149a24b94da",
-    "baseCommit": "8e233ff96fb809445aff9a5c06bb6149a24b94da",
+    "commit": "07fbf86b82d83d9724bd03622e9e87e74395286f",
+    "baseCommit": "07fbf86b82d83d9724bd03622e9e87e74395286f",
     "workingTree": false,
-    "inputsSHA256": "987359720075cb67dd8bc45bdc049aee4c5d5a42b67a7eb148e697ce5d18bd77"
+    "inputsSHA256": "63e472c0fe891cb7636d225e1c6467e4761dc3721be68081f2afa9f0b656bb29"
   },
   "dependencies": [
     {
@@ -17,28 +17,28 @@
   ],
   "changes": [
     {
-      "id": "weekly-upstream-20261108",
-      "notes": "No published source/public declaration/exact-release test changes. Dependency/bundle version metadata only. Refresh versioned request user-agent; preserve native speech behavior. Reviewed published upstream delta: @ai-sdk/hume 3.0.72 to 3.0.76. Validation passed: node Scripts/test-packages.mjs (all 52 owning packages plus the complete local facade; 3,965 reported tests and 33 explicit live skips); node Scripts/sdk.mjs dev test; node Scripts/sdk.mjs generate --check; node --test Scripts/tests/*.test.cjs (27 passed); core/provider isolation and version resolution; 52 deterministic package exports, 106 catalog consumers and four additional exact retained-minimum graphs; docs-site install/check/build (100 pages); git diff --check. No paid live-service calls were run. The publication pipeline requires successful Swift 6.3.3 CI at the exact canonical source before publishing.",
-      "compatibility": "Patch release for behavior/header corrections without new required owning API. Existing call sites and exact old selectors are retained. Direct minimums change only for concrete API use or required inherited behavior. Version-delta review does not establish full-package parity or live-service acceptance."
+      "id": "weekly-upstream-20261114",
+      "notes": "Refresh the versioned request identity while retaining the current native request, response and stream behavior. Internal upstream model-catalog reorganizations preserve the existing native policies. Reviewed npm delta: @ai-sdk/hume 3.0.76 to 3.0.81. Validation: `node Scripts/test-packages.mjs` passed all 52 owning suites and 1731 facade tests; tooling 27/27, generation/isolation checks, standalone exports and 106 minimum/latest consumers, documentation check and 101-page build passed. Publication requires green exact-source Swift 6.3.3 CI. Paid/live verification and full-package parity are not claimed.",
+      "compatibility": "Compatible behavior/header correction. Original public selectors are preserved. npm baselines and Swift SemVer are independent; this reviewed delta does not establish full-package or live-service parity."
     }
   ],
   "canonicalDirectory": "Packages/swift-ai-hume",
   "upstream": [
     {
       "name": "@ai-sdk/hume",
-      "reviewedVersion": "3.0.76",
+      "reviewedVersion": "3.0.81",
       "ledgerKind": "provider",
-      "evidence": "`AIProviders.hume`, `HumeSpeechModel`, `HumeProviderTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/WeeklyUpstreamAudit20261108.json",
+      "evidence": "`AIProviders.hume`, `HumeSpeechModel`, `HumeProviderTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/WeeklyUpstreamAudit20261108.json; 2026-11-14 delta: Docs/WeeklyUpstreamAudit20261114.json",
       "reviewStatus": "imported-reviewed-with-gaps",
-      "archiveIntegrity": "sha512-FcTtTBzOunyyBE81piHOZw3vdf+fqaQMBCf7N3wMeMR7f0d5a+mJXDh+1zMo/xHmP7l6onvDccKMDxlzNlg4bA==",
-      "sourceRef": "npm:@ai-sdk/hume@3.0.76",
-      "testRef": "0f3a85f92d1ce06ccde01d662407ef83e097a712",
+      "archiveIntegrity": "sha512-u37yfmjjs8OzmeMCQiPVLWI53JpUAD8aXfVFiJ6jmJib4Opr0m8ekTWStOzicmF4Ll/wH4d4Cwt80hW7qV7oTg==",
+      "sourceRef": "npm:@ai-sdk/hume@3.0.81",
+      "testRef": "8bc7652cdb13fc84722666eb93f45acd0d131eee",
       "testRefRelationship": "matching-release",
       "contractFamilies": [
         "ProviderV4",
         "SpeechModelV4"
       ],
-      "contractReview": "2026-11-08: published declarations/source and exact matching-release changed tests reviewed; native implementations, per-file dispositions and broader retained gaps are recorded in Docs/WeeklyUpstreamAudit20261108.json. Reviewed delta is not full-package or live-service parity."
+      "contractReview": "2026-11-14: verified published source/declarations and exact matching-release changed tests reviewed separately; native ports, per-file dispositions and retained gaps are recorded in Docs/WeeklyUpstreamAudit20261114.json. Delta review is not full-package or live-service parity."
     }
   ],
   "note": "Independent port. Imported test refs and contract review gaps retain their original status; export is not new upstream parity proof.",
@@ -57,7 +57,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-hume/Porting/map.json",
-      "sha256": "aaba0d85c57a629ff8b5672ce0e884686371565a5c7e889dbb5529c7a3b103a8"
+      "sha256": "518b59435a1e19dc5ce9dbad685bc598f6a5619f0b80a8f5a50193a29c831b99"
     },
     {
       "canonicalPath": "Packages/swift-ai-hume/README.md",
@@ -69,7 +69,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-hume/Sources/SwiftAIHume/HumeProvider.swift",
-      "sha256": "7d9a727da217e56f1adecd74b40111af4beb6434b700a27840d239f837dd7390"
+      "sha256": "99481576ac036c3eba59d5f3feb5102aab0645867123dd78838b1655af42096b"
     },
     {
       "canonicalPath": "Packages/swift-ai-hume/Tests/SwiftAIHumeTests/FixtureDownloadTransport.swift",
@@ -77,7 +77,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-hume/Tests/SwiftAIHumeTests/HumeProviderTests.swift",
-      "sha256": "7bc278d5aee6916ddd8451ad6d992255de6a994c9633f56babe82f8145b4241b"
+      "sha256": "7306a3c1c27e0ac2df279941efe0ffed758a56548b29e4addb9f04d292f8abe9"
     },
     {
       "canonicalPath": "Packages/swift-ai-hume/Tests/SwiftAIHumeTests/TestSupport.swift",
