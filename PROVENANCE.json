@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "package": "swift-ai-hume",
-  "version": "1.1.2",
-  "releaseID": "weekly-upstream-20261114",
+  "version": "1.2.0",
+  "releaseID": "upstream-parity-20261116",
   "source": {
-    "commit": "07fbf86b82d83d9724bd03622e9e87e74395286f",
-    "baseCommit": "07fbf86b82d83d9724bd03622e9e87e74395286f",
+    "commit": "1c457dea36be42376a6853aecd5c48ffc4942178",
+    "baseCommit": "1c457dea36be42376a6853aecd5c48ffc4942178",
     "workingTree": false,
-    "inputsSHA256": "63e472c0fe891cb7636d225e1c6467e4761dc3721be68081f2afa9f0b656bb29"
+    "inputsSHA256": "d7b8f52add7828d7e9ed20418fe072e7db03e75483a168bb7f5c34e9d2a04a13"
   },
   "dependencies": [
     {
@@ -17,9 +17,9 @@
   ],
   "changes": [
     {
-      "id": "weekly-upstream-20261114",
-      "notes": "Refresh the versioned request identity while retaining the current native request, response and stream behavior. Internal upstream model-catalog reorganizations preserve the existing native policies. Reviewed npm delta: @ai-sdk/hume 3.0.76 to 3.0.81. Validation: `node Scripts/test-packages.mjs` passed all 52 owning suites and 1731 facade tests; tooling 27/27, generation/isolation checks, standalone exports and 106 minimum/latest consumers, documentation check and 101-page build passed. Publication requires green exact-source Swift 6.3.3 CI. Paid/live verification and full-package parity are not claimed.",
-      "compatibility": "Compatible behavior/header correction. Original public selectors are preserved. npm baselines and Swift SemVer are independent; this reviewed delta does not establish full-package or live-service parity."
+      "id": "upstream-parity-20261116",
+      "notes": "A settings `X-Hume-Api-Key` header overrides the key and an empty output format no longer warns.",
+      "compatibility": "Source-compatible; changes are additive. Request bodies, results, warnings and errors change to match the reviewed upstream package."
     }
   ],
   "canonicalDirectory": "Packages/swift-ai-hume",
@@ -28,7 +28,7 @@
       "name": "@ai-sdk/hume",
       "reviewedVersion": "3.0.81",
       "ledgerKind": "provider",
-      "evidence": "`AIProviders.hume`, `HumeSpeechModel`, `HumeProviderTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/WeeklyUpstreamAudit20261108.json; 2026-11-14 delta: Docs/WeeklyUpstreamAudit20261114.json",
+      "evidence": "`AIProviders.hume`, `HumeSpeechModel`, `HumeProviderTests.swift`; 2026-11-01 delta: Docs/Archive/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/Archive/WeeklyUpstreamAudit20261108.json; 2026-11-14 delta: Docs/Archive/WeeklyUpstreamAudit20261114.json",
       "reviewStatus": "imported-reviewed-with-gaps",
       "archiveIntegrity": "sha512-u37yfmjjs8OzmeMCQiPVLWI53JpUAD8aXfVFiJ6jmJib4Opr0m8ekTWStOzicmF4Ll/wH4d4Cwt80hW7qV7oTg==",
       "sourceRef": "npm:@ai-sdk/hume@3.0.81",
@@ -38,7 +38,7 @@
         "ProviderV4",
         "SpeechModelV4"
       ],
-      "contractReview": "2026-11-14: verified published source/declarations and exact matching-release changed tests reviewed separately; native ports, per-file dispositions and retained gaps are recorded in Docs/WeeklyUpstreamAudit20261114.json. Delta review is not full-package or live-service parity."
+      "contractReview": "2026-11-14: verified published source/declarations and exact matching-release changed tests reviewed separately; native ports, per-file dispositions and retained gaps are recorded in Docs/Archive/WeeklyUpstreamAudit20261114.json. Delta review is not full-package or live-service parity."
     }
   ],
   "note": "Independent port. Imported test refs and contract review gaps retain their original status; export is not new upstream parity proof.",
@@ -57,19 +57,19 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-hume/Porting/map.json",
-      "sha256": "518b59435a1e19dc5ce9dbad685bc598f6a5619f0b80a8f5a50193a29c831b99"
+      "sha256": "a37f72056a5da2194d41bc151b1cf588470120dc4566ec9297ab0827aae798d9"
     },
     {
       "canonicalPath": "Packages/swift-ai-hume/README.md",
-      "sha256": "1be2e1f2c729b4e305bc64309e6d7673eb5c90a2357c14ea404b0a023010c81c"
+      "sha256": "a0ffcee3aae9243b9968387d38f629f1842caaee2121fc1b2d4fea4ef2ba00a6"
     },
     {
       "canonicalPath": "Packages/swift-ai-hume/Sources/SwiftAIHume/HumeAudioModels.swift",
-      "sha256": "22b7023f88d6d7f18f63e84b2211ef9cb4afcc2683ba9aaa6cf91485e8933e1f"
+      "sha256": "90b162090d2034c875fde7cf4ba9e57cba59ef1a2be28bfd7f502c649a8f86ba"
     },
     {
       "canonicalPath": "Packages/swift-ai-hume/Sources/SwiftAIHume/HumeProvider.swift",
-      "sha256": "99481576ac036c3eba59d5f3feb5102aab0645867123dd78838b1655af42096b"
+      "sha256": "87305a5dcd88c05d438849c78e1a03c505819394900c2ebecd43637acf8b566c"
     },
     {
       "canonicalPath": "Packages/swift-ai-hume/Tests/SwiftAIHumeTests/FixtureDownloadTransport.swift",
@@ -78,6 +78,10 @@
     {
       "canonicalPath": "Packages/swift-ai-hume/Tests/SwiftAIHumeTests/HumeProviderTests.swift",
       "sha256": "7306a3c1c27e0ac2df279941efe0ffed758a56548b29e4addb9f04d292f8abe9"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-hume/Tests/SwiftAIHumeTests/HumeUpstreamParityTests.swift",
+      "sha256": "d8f40c061f58b58ffce3fe616956f6cfab8ac0f7bc19f80871d3a29647a28be4"
     },
     {
       "canonicalPath": "Packages/swift-ai-hume/Tests/SwiftAIHumeTests/TestSupport.swift",
